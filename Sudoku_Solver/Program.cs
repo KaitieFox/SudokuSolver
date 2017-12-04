@@ -88,26 +88,24 @@ namespace Sudoku_Solver
                     Console.WriteLine("\n");
                 }
 
-
-                int row = 0;
                 int col = 0;
+                int row = 0;
+                
                 //do I need these as place holders? Also I might still need an array. 
+                //like possibly 1000 arrays.
 
-                //comparing internally
+                //comparing internally, maybe
                 for (int i = 0; i < sudMaxCol; i++)
                 {
-                    col = i;
+                    
 
                     for (int j = 0; j < sudMaxRow; j++)
                     {
-                        row = j;
+                        
 
                         if (sudMatrix[i, j] == 0)
                         {
                             
-
-
-
                             col++;
                         }                        
                     }
