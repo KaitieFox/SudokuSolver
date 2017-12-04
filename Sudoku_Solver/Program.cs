@@ -42,6 +42,14 @@ namespace Sudoku_Solver
             //now I want to sudoku.
 
             Console.WriteLine("Now let's take that vision of the matrix and do something with it. Let's solve the puzzle.");
+            Console.WriteLine("Well actually, sudoku is much bigger than 3x3. It is 9x9. \nNever repeating any number 1 through 9 in the rows. This is the important bit.");
+            Console.WriteLine("Knowing that, I can do better. It's 9 3x3 squares, in which there is no repeat of 1 through 9.");
+            Console.WriteLine("Then also no repeat in the rows.");
+            Console.WriteLine("Right, no big.");
+
+
+
+
 
             
 
