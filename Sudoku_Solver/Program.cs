@@ -43,11 +43,13 @@ namespace Sudoku_Solver
 
             //now I want to sudoku.
 
-            Console.WriteLine("Now let's take that vision of the matrix and do something with it. Let's solve the puzzle.");
-            Console.WriteLine("Well actually, sudoku is much bigger than 3x3. It is 9x9. \nNever repeating any number 1 through 9 in the rows. This is the important bit.");
-            Console.WriteLine("Knowing that, I can do better. It's 9 3x3 squares, in which there is no repeat of 1 through 9.");
-            Console.WriteLine("Then also no repeat in the rows.");
+            //Console.WriteLine("Now let's take that vision of the matrix and do something with it. Let's solve the puzzle.");
+            //Console.WriteLine("Well actually, sudoku is much bigger than 3x3. It is 9x9. \nNever repeating any number 1 through 9 in the rows. This is the important bit.");
+            //Console.WriteLine("Knowing that, I can do better. It's 9 3x3 squares, in which there is no repeat of 1 through 9.");
+            //Console.WriteLine("Then also no repeat in the rows.");
             //Console.WriteLine("Right, no big.");
+
+            Console.WriteLine("Sudoku! 3x3");
 
             //temp change to make the matrix smaller, to deal with just these.
             int sudMaxCol = 3;
@@ -55,19 +57,8 @@ namespace Sudoku_Solver
 
             do
             {
-                //declaring a boatload of variables?
-                int[,] sudMatrix = new int[sudMaxCol, sudMaxRow];
-
-                //probably not necessary. the array takes care of this.
-                int a1 = sudMatrix[0, 0];
-                int a2 = sudMatrix[0, 1];
-                int a3 = sudMatrix[0, 2];
-                int a4 = sudMatrix[1, 0];
-                int a5 = sudMatrix[1, 1];
-                int a6 = sudMatrix[1, 2];
-                int a7 = sudMatrix[2, 0];
-                int a8 = sudMatrix[2, 1];
-                int a9 = sudMatrix[2, 2];
+                //you know, I bet I could leave it in a matrix and still compare well. In fact I think I need to. NESTED MATRICES.
+                int[,] sudMatrix = new int[sudMaxCol, sudMaxRow];                             
 
                 int[] sudoku = new int[9];
 
@@ -100,14 +91,13 @@ namespace Sudoku_Solver
 
                     Console.WriteLine("\n");
                 }
+                               
 
-                //could I instead put all these into an array?
+                
 
-                //making sure array works
-                foreach (int s in sudoku)
-                {
-                    Console.WriteLine(s);
-                }
+                
+
+
 
 
 
