@@ -10,6 +10,8 @@ namespace Sudoku_Solver
     {
         static void Main(string[] args)
         {
+            string userChoice;
+
             int MaxCol = 3;
             int MaxRow = 3;
 
@@ -47,11 +49,18 @@ namespace Sudoku_Solver
             Console.WriteLine("Then also no repeat in the rows.");
             Console.WriteLine("Right, no big.");
 
+            int sudMaxCol = 9;
+            int sudMaxRow = 9;
+
+            do
+            {
+                double[,] sudMatrix = new double[sudMaxCol, sudMaxRow];
+
+                Console.WriteLine("Write in the sudoku numbers you know. Enter a zero for the ones you don't.");
 
 
 
 
-            
 
 
 
@@ -60,8 +69,13 @@ namespace Sudoku_Solver
 
 
 
+                //setting it up for users to solve the puzzle. But I want to create a program that solves it for me.
+                Console.WriteLine("Continue solving?");
+                userChoice = Console.ReadLine();
 
-
+            }
+            while (userChoice == "yes");
+            //any variable = 0
 
 
         }
