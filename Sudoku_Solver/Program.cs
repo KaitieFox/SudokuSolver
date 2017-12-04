@@ -73,14 +73,21 @@ namespace Sudoku_Solver
 
                 Console.WriteLine("Write in the sudoku numbers you know. Enter a zero for the ones you don't.");
 
+                int a = 0;
+
                 for (int i = 0; i < sudMaxCol; i++)
                 {
                     for (int j = 0; j < sudMaxRow; j++)
-                    {
+                    {                        
                         Console.WriteLine("Enter static numbers for {0}, {1}", i, j);
-                        sudMatrix[i, j] = int.Parse(Console.ReadLine());
-                        sudoku[i] = sudMatrix[i, j]; //no!! this logic doesn't work!
+                        sudMatrix[i, j] = int.Parse(Console.ReadLine()); 
+                        
+                        //trying to populate an array. declared variable a outside loop. THIS WORKS.
+                        sudoku[a] = sudMatrix[i, j];
+                        a++;
+
                     }
+                    
                 }
 
                 //this prints in matrix format
