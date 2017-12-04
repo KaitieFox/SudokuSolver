@@ -79,7 +79,7 @@ namespace Sudoku_Solver
                     {
                         Console.WriteLine("Enter static numbers for {0}, {1}", i, j);
                         sudMatrix[i, j] = int.Parse(Console.ReadLine());
-                        sudoku[i] = sudMatrix[i, j];
+                        sudoku[i] = sudMatrix[i, j]; //no!! this logic doesn't work!
                     }
                 }
 
