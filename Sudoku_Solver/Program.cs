@@ -64,19 +64,15 @@ namespace Sudoku_Solver
 
                 Console.WriteLine("Write in the sudoku numbers you know. Enter a zero for the ones you don't.");
 
-                int a = 0;
-
+                
+                //user input matrix 1-3
                 for (int i = 0; i < sudMaxCol; i++)
                 {
                     for (int j = 0; j < sudMaxRow; j++)
                     {                        
                         Console.WriteLine("Enter static numbers for {0}, {1}", i, j);
-                        sudMatrix[i, j] = int.Parse(Console.ReadLine()); 
+                        sudMatrix[i, j] = int.Parse(Console.ReadLine());                                            
                         
-                        //trying to populate an array. declared variable a outside loop. THIS WORKS.
-                        sudoku[a] = sudMatrix[i, j];
-                        a++;
-
                     }
                     
                 }
@@ -91,11 +87,34 @@ namespace Sudoku_Solver
 
                     Console.WriteLine("\n");
                 }
-                               
 
-                
 
-                
+                int row = 0;
+                int col = 0;
+                //do I need these as place holders? Also I might still need an array. 
+
+                //comparing internally
+                for (int i = 0; i < sudMaxCol; i++)
+                {
+                    col = i;
+
+                    for (int j = 0; j < sudMaxRow; j++)
+                    {
+                        row = j;
+
+                        if (sudMatrix[i, j] == 0)
+                        {
+                            
+
+
+
+                            col++;
+                        }                        
+                    }
+                }
+
+
+
 
 
 
