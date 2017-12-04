@@ -58,7 +58,26 @@ namespace Sudoku_Solver
 
                 Console.WriteLine("Write in the sudoku numbers you know. Enter a zero for the ones you don't.");
 
+                for (int i = 0; i < sudMaxCol; i++)
+                {
+                    for (int j = 0; j < sudMaxRow; j++)
+                    {
+                        Console.WriteLine("Enter static numbers for {0}, {1}", i, j);
+                        sudMatrix[i, j] = int.Parse(Console.ReadLine());
 
+                    }
+                }
+
+                //this prints in matrix format
+                for (int m = 0; m < sudMaxCol; m++)
+                {
+                    for (int j = 0; j < sudMaxRow; j++)
+                    {
+                        Console.Write(sudMatrix[m, j] + "\t");
+                    }
+
+                    Console.WriteLine("\n");
+                }
 
 
 
@@ -81,3 +100,7 @@ namespace Sudoku_Solver
         }
     }
 }
+
+//what if I set up different variables for the different squares?
+//for one 3x3, I use one set of variables and compare those.
+//Complex if statements is how I'm forseeing this.
